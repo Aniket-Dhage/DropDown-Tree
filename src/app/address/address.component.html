@@ -1,0 +1,42 @@
+<div [formGroup]="countryForm" class="dropdown text-center">
+    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Select Country:
+        <select formControlName="countryId" (ngModelChange)="onchangeCountry($event)">
+            <option value="undefined">---select a Country---</option>
+            <option *ngFor="let c of counrtyList" [ngValue]="c">{{c.countryName}} </option>
+        </select>
+    </button>
+</div><br>
+
+<div [formGroup]="stateForm" class="dropdown text-center">
+    <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        State :
+        <select formControlName="stateName" (ngModelChange)="onchangeState($event)">
+            <option value="undefined">---select a State---</option>
+            <option *ngFor="let s of stateList" [ngValue]="s.clist">{{s.stateName}} </option>
+        </select>
+    </button>
+</div><br>
+
+<div [formGroup]="cityForm" class="dropdown text-center">
+    <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        City :
+        <select formControlName="cityName" (ngModelChange)="onchangeCity($event)">
+            <option value="undefined">---select a City---</option>
+            <option *ngFor="let c of cityList" [ngValue]="c">{{c.cityName}} </option>
+        </select>
+    </button>
+
+</div>
+<button (click)="update()">Update</button>
+
+<div class="card">
+    <div class="card-head">
+        <div class="card-body">
+            asdasdasd
+        </div>
+    </div>
+</div>
